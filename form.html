@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slow down, partner.</title>
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header" id="header-img">
+            <img src="imgs/pato-policial.png">
+        </div>
+        <div id="header-title">
+            <h1 id="hello-user">Slow there, partner. There's a waiting list! Sign up:</h1>
+        </div>
+        <div class="cadastro">
+            <form id="cadastro-user" onsubmit="cadastraUser(); event.preventDefault();">
+                <center>
+                    <div id="fodasse">
+                    <input type="text" id="txtEmail" name="user_email" placeholder="Name...">
+                    </div>
+                    <span id="error-email" class="error" style="display:none;">Please give a valid Email.</span>
+                    <div id="fodasse">
+                    <input type="text" id="txtNome" name="user_name" placeholder="Email...">
+                    </div>
+                    <span id="error-nome" class="error" style="display:none;">Please, give a valid name.</span>
+                    <br>
+                    <input id="submit-button" type="submit" value="Send">
+                </center>
+            </form>
+        </div>
+        <div id="result-table" style="display:none;">
+            <center>
+            <h2 id="title-table">Check the waiting list:</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <tr>
+                        <td>Elon Musk</td>
+                        <td>elon@tesla.com</td>
+                    </tr>
+                    <tr>
+                        <td>Oprah Winfrey</td>
+                        <td>oprah@winfrey.com</td>
+                    </tr>
+                    <tr>
+                        <td>Malala Yousafzai</td>
+                        <td>malala@yousafzai.com</td>
+                    </tr>
+                    <tr>
+                        <td>Rihanna</td>
+                        <td>rihanna@music.com</td>
+                    </tr>
+                    <tr>
+                        <td>Dwayne Johnson</td>
+                        <td>dwayne@johnson.com</td>
+                    </tr>
+                    <tr>
+                        <td>Emma Watson</td>
+                        <td>emma@watson.com</td>
+                    </tr>
+                    <tr>
+                        <td>Leonardo DiCaprio</td>
+                        <td>leo@dicaprio.com</td>
+                    </tr>
+                    <tr>
+                        <td>Taylor Swift</td>
+                        <td>taylor@swift.com</td>
+                    </tr>
+                    <tr>
+                        <td>Michelle Obama</td>
+                        <td>michelle@obama.com</td>
+                    </tr>
+                    <tr>
+                        <td>Bill Gates</td>
+                        <td>bill@gates.com</td>
+                    </tr>
+                    <tr>
+                        <td>Beyoncé Knowles</td>
+                        <td>beyonce@knowles.com</td>
+                    </tr>
+                    <tr>
+                        <td>Mark Zuckerberg</td>
+                        <td>mark@facebook.com</td>
+                    </tr>
+                    <tr>
+                        <td>Lady Gaga</td>
+                        <td>gaga@music.com</td>
+                    </tr>
+                    <tr>
+                        <td>Greta Thunberg</td>
+                        <td>greta@climate.com</td>
+                    </tr>
+                    <tr>
+                        <td>Serena Williams</td>
+                        <td>serena@tennis.com</td>
+                    </tr>
+                    <tr>
+                        <td>Stephen King</td>
+                        <td>stephen@king.com</td>
+                    </tr>
+                    <tr>
+                        <td>David Beckham</td>
+                        <td>david@beckham.com</td>
+                    </tr>
+                    <tr>
+                        <td>Chris Evans</td>
+                        <td>chris@evans.com</td>
+                    </tr>
+                    <tr>
+                        <td>Viola Davis</td>
+                        <td>viola@davis.com</td>
+                    </tr>
+                    <tr>
+                        <td>Keanu Reeves</td>
+                        <td>keanu@reeves.com</td>
+                    </tr>
+                </tbody>
+            </table>
+            </center>
+        </div>
+    </div>
+    <script>
+        function cadastraUser() {
+            document.getElementById("hello-user").innerHTML = "Slow there, partner. There's a waiting list! Sign up:";
+
+            var userName = document.getElementById("txtEmail").value;
+            var userEmail = document.getElementById("txtNome").value;
+
+            if (userName.length == 0) {
+                document.getElementById("error-nome").style.display = "block";
+            } else {
+                document.getElementById("error-nome").style.display = "none";
+            }
+
+            if (userEmail.length == 0) {
+                document.getElementById("error-email").style.display = "block";
+            } else {
+                document.getElementById("error-email").style.display = "none";
+            }
+
+            if (userName.length !== 0 && userEmail.length !== 0) {
+                document.getElementById("hello-user").innerHTML = `${userName}, you have been officially added to the 'Blue Duck' waiting list!`;
+
+                var tableBody = document.getElementById("table-body");
+                var newRow = tableBody.insertRow();
+                var cellName = newRow.insertCell(0);
+                var cellEmail = newRow.insertCell(1);
+                cellName.innerHTML = userName;
+                cellEmail.innerHTML = userEmail;
+
+                document.getElementById("cadastro-user").style.display = "none";
+                document.getElementById("result-table").style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

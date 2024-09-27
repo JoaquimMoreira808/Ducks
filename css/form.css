@@ -1,0 +1,108 @@
+#header-img {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 15px; 
+    left: calc(50% - 250px);
+}
+
+#header-title {
+    margin-top: 500px;
+    font-size: 15px;
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+    color: #25242c;
+    text-shadow: 1px 1px 1px rgba(69, 69, 90, 0.5);;
+}
+
+.error {
+    color: rgb(202, 5, 5);
+    font-style: italic;
+    display: none;
+}
+
+#txtEmail, #txtNome {
+    background-color: #e8f7ff;
+    width: 10%;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+#submit-button {
+    font-size: 20px;
+    background-color: #fff;
+    width: 10%;
+    padding: 5px;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+
+#title-table {
+    font-size: 20px;
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+    color: #25242c;
+    text-shadow: 1px 1px 1px rgba(69, 69, 90, 0.5);;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-family: "Oswald", sans-serif;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #e0e0e0;
+}
+
+th {
+    background-color: #25242c;
+    background: linear-gradient(to top, #25242c, #262433);
+    color: #ffffff;
+    font-size: 18px;
+}
+
+td {
+    background-color: #f8f7ff;
+    color: #25242c;
+}
+
+.error {
+    font-family: "Bitter", serif;
+    font-size: 14px;
+    color: rgb(202, 5, 5);
+}
+
+#submit-button {
+    background-color: #25242c;
+    background: linear-gradient(to top, #25242c, #262433);
+    color: #ffffff;
+}
+
+#submit-button:hover {
+    background-color: #17161b;
+    background: linear-gradient(to top, #25242c, #262433);
+    color: #b3b3b3;
+}
+
+.cadastro #submit-button {
+    margin: 20px 20px;
+}
+
+#fodasse {
+    padding: 5px;
+}
+
+#txtEmail, #txtNome {
+    background-color: #e8f7ff;
+    width: 20%; 
+    padding: 10px;
+    margin: 10px; 
+    border-radius: 5px;
+    display: inline-block; 
+}
